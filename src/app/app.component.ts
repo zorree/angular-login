@@ -44,7 +44,7 @@ export class AppComponent {
     } else if (data["meta"]["response_code"] == 40001){
       Swal.fire(data["meta"]["response_data"],data["meta"]["response_datetime"], 'error');
     } else {
-      Swal.fire(JSON.stringify(data),"Invalid username or password", 'warning');
+      Swal.fire(data["meta"]["response_desc"],data["meta"]["response_datetime"], 'warning');
     }
     
   }
